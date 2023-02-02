@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<!--=== Coding by CodingLab | www.codinglabweb.com === -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="style.css">
+     
+    <!----===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <!--<title>Responsive Regisration Form </title>--> 
+</head>
+<body>
+    <div class="container">
+        <header>Registration</header>
+
+        <form action="#">
+            <div class="form first">
+                <div class="details personal">
+                    <span class="title">Personal Details</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Full Name</label>
+                            <input onchange="setDetails(this.name,this.value)"  name="fullName" type="text" placeholder="Enter your name" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>Date of Birth</label>
+                            <input onchange="setDetails(this.name,this.value)"  name="birthDate" type="date" placeholder="Enter birth date" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Email</label>
+                            <input type="text" onchange="setDetails(this.name,this.value)"  name="email" placeholder="Enter your email" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Mobile Number</label>
+                            <input type="number" onchange="setDetails(this.name,this.value)"  name="mobileNumber" placeholder="Enter mobile number"required >
+                        </div>
+
+                        <div class="input-field">
+                            <label>Gender</label>
+                            <select onchange="setDetails(this.name,this.value)"  name="gender" required>
+                                <option disabled selected>Select gender</option>
+                                <option>Male</option>
+                                <option>Female</option>
+                                <option>Others</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Occupation</label>
+                            <input onchange="setDetails(this.name,this.value)"  name="Occupation" type="text" placeholder="Enter your ccupation" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="details ">
+                    <span class="title">Family Details</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Father name</label>
+                            <input onchange="setDetails(this.name,this.value)"  name="fatherName" type="text" placeholder="Enter name"required >
+                        </div>
+
+                        <div class="input-field">
+                            <label>Mother name</label>
+                            <input onchange="setDetails(this.name,this.value)"  name="motherName" type="text" placeholder="Enter name" required>
+                        </div>
+
+                    </div>
+
+                    <button class="nextBtn">
+                        <span class="btnText">Next</span>
+                        <i class="uil uil-navigator"></i>
+                    </button>
+                </div> 
+            </div>
+
+            <div class="form second">
+                <div class="details address">
+                    <span class="title">Address Details</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Address Type</label>
+                            <input onchange="setDetails(this.name,this.value)"  name="Address " type="text" placeholder="Permanent or Temporary" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Nationality</label>
+                            <input onchange="setDetails(this.name,this.value)"  name="nationality" type="text" placeholder="Enter nationality" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>State</label>
+                            <input onchange="setDetails(this.name,this.value)"  name="state" type="text" placeholder="Enter your state" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>District</label>
+                            <input onchange="setDetails(this.name,this.value)"  name="district" type="text" placeholder="Enter your district" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Block Number</label>
+                            <input onchange="setDetails(this.name,this.value)"  name="block" type="number" placeholder="Enter block number" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Pin Number</label>
+                            <input onchange="setDetails(this.name,this.value)"  name="pinNumber" type="number" placeholder="Enter Pin number" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="details college">
+                    <span class="title">Academic Details</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Hsc Institution Name</label>
+                            <input onchange="setDetails(this.name,this.value)"  name="HSCInstitutionName" type="text" placeholder="Enter father name" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Hsc Bord</label>
+                            <select onchange="setDetails(this.name,this.value)"   name="Hscboard" id="Bord">
+                                <option value="CBSE">CBSE</option>
+                                <option value="ICSC">ICSE</option>
+                                <option value="State Bord">State Bord</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Bord Mark in %</label>
+                            <input onchange="setDetails(this.name,this.value)"  name="boardMark" type="number"  required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>SSc Institution Name</label>
+                            <input onchange="setDetails(this.name,this.value)"  name="SSCInstitutionName"  type="text" placeholder="Enter Institution name" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>SSC Bord</label>
+                            <select  onchange="setDetails(this.name,this.value)"  name="sscBoard" id="Bord">
+                                <option value="CBSE">CBSE</option>
+                                <option value="ICSC">ICSE</option>
+                                <option value="State Bord">State Bord</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Mark in %</label>
+                            <input onchange="setDetails(this.name,this.value)"  name="Mark" type="number" placeholder="Mark" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Curently Pursuing</label>
+                            <select onchange="setDetails(this.name,this.value)"  name="CurrentlyPersuing" id="Bord">
+                                <option value="B-Tech">B-Tech</option>
+                                <option value="MBA">MBA</option>
+                                <option value="MCA">MCA</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Institution Name</label>
+                            <input onchange="setDetails(this.name,this.value)"  name="CurrentInstitutionName" type="text" placeholder="Institution name" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Mark in % or cgpa</label>
+                            <input onchange="setDetails(this.name,this.value)"  name="markInCgpa" type="number" placeholder="Mark" required>
+                        </div>
+                        
+                        <div class="input-field">
+                            <h3>Upload document</h3>
+                            
+                            <input onchange="setDetails(this.name,this.value)"  name="uploadedDocument1" type="file" id="">
+                        </div>
+                        <div class="input-field">
+                            
+                            <input onchange="setDetails(this.name,this.value)"  name="uploadedDocument2" type="file" id="">
+                        </div>
+                        <div class="input-field">
+                    
+                            <input type="file" onchange="setDetails(this.name,this.value)"  name="uploadedDocument3" id="">
+                        </div>                        
+                    </div>
+
+                    <div class="buttons">
+                        <div class="backBtn">
+                            <i class="uil uil-navigator"></i>
+                            <span class="btnText">Back</span>
+                        </div>
+
+                        
+                        <button class="sumbit">
+                            <span class="btnText" onclick="storeInLocalStorage()">Submit</span>
+                            <i class="uil uil-navigator"></i>
+                        </button>
+                    </div>
+                </div> 
+            </div>
+        </form>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
+ 
